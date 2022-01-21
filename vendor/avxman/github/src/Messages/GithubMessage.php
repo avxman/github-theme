@@ -9,37 +9,11 @@ class GithubMessage
     protected array $messages = [];
 
     protected function themeHandler(int $type = 0, string $body = '', string $file = '', int $line = 0) : string{
-        return "<!DOCTYPE html>
-<html>
-    <head>
-        <title>Server Error Custom</title>
-    </head>
-    <body>
-        <h1 style=\"text-align: center\">Server Error Custom</h1>
-        <div style=\"display: flex;flex-direction: column;\">
-            <div><strong>ОШИБКА:</strong> <span style=\"color: red\">$body</span></div>
-            <div><strong>СТРОКА:</strong> $line</div>
-            <div><strong>ФАЙЛ:</strong> $file</div>
-        </div>
-    </body>
-</html>
-";
+        return $body;
     }
 
     protected function themeException(string $body = '') : string{
-        return "<!DOCTYPE html>
-<html>
-    <head>
-        <title>Server Error</title>
-    </head>
-    <body>
-        <h1 style=\"text-align: center\">Server Error</h1>
-        <ul style=\"list-style: none\">
-            $body
-        </ul>
-    </body>
-</html>
-";
+        return $body;
     }
 
     protected function errorHandler(int $errType, string $errText, string $errFile, int $errLine) : void{
@@ -107,7 +81,7 @@ class GithubMessage
         $messages = "";
         $i = 1;
         foreach ($this->messages as $message){
-            $messages .= "<li>$i. $message</li>".PHP_EOL;
+            $messages .= "$i. $message; ".PHP_EOL;
             $i++;
         }
         throw new \ErrorException($messages);
