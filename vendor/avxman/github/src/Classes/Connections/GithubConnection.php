@@ -73,7 +73,9 @@ class GithubConnection extends BaseConnection
             $json = json_encode([]);
         }
 
-        dd($json);
+        dump($json);
+
+        die();
 
         return $this->data = json_decode($json);
 
