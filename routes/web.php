@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/test', static function (){
+    return "Обновление произошло!";
+});
+
 Route::fallback(static function () {
     return abort(404);
 });
