@@ -7,8 +7,6 @@ class GithubConnection extends BaseConnection
 
     public function validation() : bool{
 
-        dd(123);
-
         if (!extension_loaded('hash')) {
             $this->errorMessage[] = "Missing 'hash' php extension to check the secret code validity.";
             return false;

@@ -12,7 +12,6 @@ abstract class BaseConnection
     protected array $errorMessage = [];
 
     protected function validation() : bool{
-        dd(32223323);
         return false;
     }
 
