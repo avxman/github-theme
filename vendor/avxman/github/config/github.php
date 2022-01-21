@@ -4,21 +4,21 @@ return [
 
 
     //
-    'IS_GITHUB'=>true,
+    'IS_GITHUB'=>env('GITHUB_ENABLED', true),
 
     //
-    'IS_DEBUG'=>true,
+    'IS_DEBUG'=>env('GITHUB_DEBUG', true),
 
     //
-    'GITHUB_TOKEN'=>'',
+    'GITHUB_TOKEN'=>env('GITHUB_TOKEN', ''),
 
     //
-    'HTTP_X_GITHUB_SECRET'=>'',
+    'HTTP_X_GITHUB_SECRET'=>env('GITHUB_SECRET', ''),
 
     //
-    'GITHUB_REPO'=>'',
+    'GITHUB_REPO'=>env('GITHUB_REPO', ''),
 
     //
-    'GITHUB_REPO_URL'=>'',
+    'GITHUB_REPO_URL'=>env('GITHUB_REPO_URL', ''),
 
 ];

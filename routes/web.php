@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/test', static function (){
-    return "Обновление произошло 12312213!";
+    return "Обновление!";
 });
 
 Route::fallback(static function () {

@@ -10,7 +10,7 @@ class GithubController extends Controller
 
     public function index(){
         GithubFacade::instance();
-        return Response::json(['status'=>true, 'message'=>['It\'s me!']]);
+        return Response::json(['status'=>true, 'message'=>['Комманда обработана :)']]);
     }
 
 }
