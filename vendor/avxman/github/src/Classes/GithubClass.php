@@ -18,11 +18,11 @@ class GithubClass
     protected bool $post_is_github = true;
     protected GithubMessage $message;
 
-    protected function fromGithub() : BaseConnection{
+    protected function fromGithub() : GithubConnection{
         return new GithubConnection($this->server, $this->config);
     }
 
-    protected function fromSite() : BaseConnection{
+    protected function fromSite() : SiteConnection{
         return new SiteConnection($this->server, $this->config);
     }
 
