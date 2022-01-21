@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/{version}/github/{secret}/{repo}', [\App\Http\Controllers\GithubController::class, 'index'])
+Route::any('/{version}/github/{secret}/{repo}', [\App\Http\Controllers\GithubController::class, 'index'])
     ->setWheres(['version'=>'v1','secret'=>config()->get('github.GITHUB_TOKEN'), 'repo'=>'repository']);
 
