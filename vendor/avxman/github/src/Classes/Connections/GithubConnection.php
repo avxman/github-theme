@@ -5,21 +5,9 @@ namespace Avxman\Github\Classes\Connections;
 class GithubConnection extends BaseConnection
 {
 
-    public function connect(): bool
-    {
-
-        var_dump('Is here connect');
-
-        die();
-
-        return true;
-    }
-
     public function validation() : bool{
 
-        var_dump('Is here');
-
-        die();
+        dd(123);
 
         if (!extension_loaded('hash')) {
             $this->errorMessage[] = "Missing 'hash' php extension to check the secret code validity.";
