@@ -9,6 +9,8 @@ class GithubConnection extends BaseConnection
 
         var_dump('Is here');
 
+        die();
+
         if (!extension_loaded('hash')) {
             $this->errorMessage[] = "Missing 'hash' php extension to check the secret code validity.";
             return false;
