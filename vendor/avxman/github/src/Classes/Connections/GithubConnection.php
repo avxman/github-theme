@@ -57,7 +57,7 @@ class GithubConnection extends BaseConnection
 
     }
 
-    public function getData(): array
+    public function getData(): object
     {
 
         $type = $this->server['CONTENT_TYPE']??'default';
@@ -70,12 +70,8 @@ class GithubConnection extends BaseConnection
 
         if($json === FALSE) {
             $this->errorMessage[] = "Unsupported content type: ".$type;
-            $json = json_encode([]);
+            $json = json_encode((object)[]);
         }
-
-        var_dump($json);
-
-        die();
 
         return $this->data = json_decode($json);
 
