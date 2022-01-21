@@ -68,8 +68,6 @@ class GithubClass
             ? $this->fromGithub()
             : $this->fromSite();
 
-        dd($instance);
-
         if(!$instance->isConnect()){
             $messages = array_merge(['Не удалось соеденится с адресом'], $instance->errorMessage());
             $this->message->setMessages($messages)->errors();
