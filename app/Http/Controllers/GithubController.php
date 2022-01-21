@@ -8,7 +8,7 @@ class GithubController extends Controller
 {
 
     public function index(){
-        return Response::json(['status'=>true, 'message'=>['It\'s me!!!']]);
+        return Response::json(['status'=>true, 'message'=>['It\'s me 2!!!']]);
     }
 
 }
