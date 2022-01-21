@@ -6,7 +6,7 @@ abstract class BaseConnection
 {
 
     protected bool $is_connect = false;
-    protected object $data;
+    protected array $data = [];
     protected array $config = [];
     protected array $server = [];
     protected array $errorMessage = [];
@@ -22,7 +22,6 @@ abstract class BaseConnection
     public function __construct(array $server = [], array $config = []){
         $this->server = $server;
         $this->config = $config;
-        $this->data = (object)[];
         $this->connect();
     }
 
@@ -34,7 +33,7 @@ abstract class BaseConnection
         return $this->errorMessage;
     }
 
-    public function getData() : object{
+    public function getData() : array{
         return $this->data;
     }
 

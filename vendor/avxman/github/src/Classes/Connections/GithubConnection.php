@@ -57,7 +57,7 @@ class GithubConnection extends BaseConnection
 
     }
 
-    public function getData(): object
+    public function getData(): array
     {
 
         $type = $this->server['CONTENT_TYPE']??'default';
@@ -73,7 +73,7 @@ class GithubConnection extends BaseConnection
             $json = json_encode((object)[]);
         }
 
-        return $this->data = json_decode($json);
+        return $this->data = json_decode((array)$json);
 
     }
 
