@@ -28,7 +28,7 @@
                 "Avxman\\Github\\Providers\\GithubServiceProvider"
             ],
             "aliases": {
-                "Breadcrumbs": "Avxman\\Github\\Facades\\GithubFacade"
+                "Github": "Avxman\\Github\\Facades\\GithubFacade"
             }
         }
     }
