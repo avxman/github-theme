@@ -37,7 +37,7 @@ class GithubClass
     public function __construct(){
         $this->server = request()->server->all();
         $this->config = config()->get('github');
-        $this->post_is_github = request()->has('type', $this->config['IS_GITHUB']);
+        $this->post_is_github = request()->has('type') ? request()->get('type') : $this->config['IS_GITHUB'];
         $this->message = new GithubMessage($this->config['IS_DEBUG']);
         $errorMessage = [];
         if(!count($this->config)) {
