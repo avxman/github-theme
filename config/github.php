@@ -15,9 +15,9 @@ return [
     'HTTP_X_GITHUB_SECRET'=>'secret-dvacom',
 
     //
-    'GITHUB_REPO'=>'avxman/github',
+    'GITHUB_REPO'=>'avxman/github-theme',
 
     //
-    'GITHUB_REPO_URL'=>'https://github.com/avxman/github.git',
+    'GITHUB_REPO_URL'=>'https://github.com/avxman/github-theme.git',
 
 ];
